@@ -1,0 +1,5 @@
+.hero-container {
+  background: linear-gradient(to right, #00df9a, #FF2065);
+  border-radius: 20px; /* Adjust the border-radius to control the curvature */
+  padding: 20px; /* Add padding as needed */
+}

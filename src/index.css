@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: white;
+}
+
+
+html * {
+  font-family: 'mono', monospace;
+
+}
+
+.spline-watermark {
+  display: none!important;
+  opacity: 0!important;
+  transform: scale(0);
+
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+svg {
+  pointer-events: none;
+  border: none;
+}
+
+.flame-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.flame {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff4500; /* Adjust the color as needed */
+  border-radius: 50%;
+  transform-origin: 50% 100%;
+  animation: flameAnimation 0.3s linear infinite alternate;
+}
+
+@keyframes flameAnimation {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1.5) scaleX(1.2);
+  }
+}
+
+.page-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
