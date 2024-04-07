@@ -75,7 +75,6 @@ export default function Pricing() {
   return (
     <div className="bg-[#0D1117] overflow-hidden pb-60 mx-auto flex flex-col justify-center items-center ">
       <div className="max-w-[800px] w-full h-full mt-10 justify-center text-center items-center mx-auto flex flex-col space-y-4">
-        <p className="text-[#00300] md:text-5xl text-3xl p-2 mb-10">Start today for 0$ !</p>
       </div>
       <>
         <div className="slider-container">

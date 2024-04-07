@@ -30,7 +30,7 @@ import useWithCUrsor from '../../hooks/withFlameCursor';
         { pos: true, text: " Prototype ideas into fully functional APIs, instantly." },
       ]
   return (
-    <div id="hero" className=" text-white bg-[#0D1117] relative overflow-hidden pb-[400px] ">
+    <div id="hero" className=" text-white bg-[#0D1117] relative overflow-hidden">
         <div className="max-w-[800px]  w-full h-full mt-10 mx-auto text-center flex flex-col justify-center items-center space-y-4">
             <p className="text-[#00df9a] md:text-4xl sm:text-3 font-bold p-2"> Empower Your Team</p>
             <p className="md:text-3xl sm:text-2xl w-70 h-[100px]">
