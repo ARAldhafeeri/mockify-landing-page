@@ -5,7 +5,7 @@ export default function Navbar() {
     const [showMenu, setShowMenu] = React.useState(false);
     const toggleMenu = () => setShowMenu(!showMenu);
   return (
-    <div className="bg-[#000300] relative text-white justify-between items-center h-24 max-w[1240px] mx-auto px-4">
+    <div className="bg-[#0D1117] relative text-white justify-between items-center h-24 max-w[1240px] mx-auto px-4">
         <div className="flex flex-row justify-end" href="/docs">
           <img src={logo} alt="/" className="w-10 h-10" />
           <h1 className="w-full text-3xl font-bold mt-2 text-[#00df9a]">Mockify.io</h1>

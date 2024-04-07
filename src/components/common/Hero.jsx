@@ -22,21 +22,22 @@ import useWithCUrsor from '../../hooks/withFlameCursor';
     }, [toggle, windowWidth])
     
     const sentences = [
-        { pos: false, text: " Avoid the negative complexities managing mock endpoints" },
+        { pos: false, text: " Avoid the negative complexities managing mock APIs" },
         { pos: true, text: " Craft, manage, and innovate APIs effortlessly." },
         { pos: false, text: " Bypass challenges associated with time constraints." },
         { pos: true, text: " Elevate your APIs to first-class citizens." },
-        { pos: false, text: " Say welcome the ease of API development with our mock APIs." },
+        { pos: false, text: " Say goodbye to long time to prototype ideas" },
         { pos: true, text: " Prototype ideas into fully functional APIs, instantly." },
       ]
   return (
-    <div id="hero" className=" text-white bg-[#000300] relative overflow-hidden pb-[400px] ">
+    <div id="hero" className=" text-white bg-[#0D1117] relative overflow-hidden pb-[400px] ">
         <div className="max-w-[800px]  w-full h-full mt-10 mx-auto text-center flex flex-col justify-center items-center space-y-4">
             <p className="text-[#00df9a] md:text-4xl sm:text-3 font-bold p-2"> Empower Your Team</p>
             <p className="md:text-3xl sm:text-2xl w-70 h-[100px]">
             Accelerate your development process with putting API endpoints at the forefront:  
-                <TypeWriterArray toggleHandler={setToggle} sentences={sentences} delay={40} />
             </p>
+            <TypeWriterArray toggleHandler={setToggle} sentences={sentences} delay={40} />
+
             {enableManualToggle && ( 
                 <div  className="cursor-pointer ">
                     <label onChange={() => setToggle(!toggle)} class=" relative inline-flex items-center cursor-pointer">
@@ -61,14 +62,7 @@ import useWithCUrsor from '../../hooks/withFlameCursor';
             }
             </div>
         </div>
-            <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1440 300"
-                    className=" md:absolute md:block bottom-0 left-0 w-full hidden"
-                >
-                    <path fill="white"  d="M0,224L21.8,224C43.6,224,87,224,131,218.7C174.5,213,218,203,262,170.7C305.5,139,349,85,393,90.7C436.4,96,480,160,524,208C567.3,256,611,288,655,282.7C698.2,277,742,235,785,208C829.1,181,873,171,916,181.3C960,192,1004,224,1047,213.3C1090.9,203,1135,149,1178,128C1221.8,107,1265,117,1309,133.3C1352.7,149,1396,171,1418,181.3L1440,192L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"></path>
-
-            </svg>
+          
     </div>
   )
 }

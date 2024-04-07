@@ -73,7 +73,7 @@ export default function Pricing() {
   }, [cardCount]);
 
   return (
-    <div className="bg-[#00df9a] overflow-hidden pb-60 mx-auto flex flex-col justify-center items-center ">
+    <div className="bg-[#0D1117] overflow-hidden pb-60 mx-auto flex flex-col justify-center items-center ">
       <div className="max-w-[800px] w-full h-full mt-10 justify-center text-center items-center mx-auto flex flex-col space-y-4">
         <p className="text-[#00300] md:text-5xl text-3xl p-2 mb-10">Start today for 0$ !</p>
       </div>
@@ -119,7 +119,7 @@ export default function Pricing() {
               <img
                 src={card.image}
                 alt={card.header}
-                className="md:w-[75px] md:h-[75px] w-[75px] h-[75px] shadow-[#000300] bg-[#000300] shadow-md rounded-xl hover:scale-110"
+                className="md:w-[125px] md:h-[125px] w-[75px] h-[75px] shadow-[#000300] bg-[#000300] shadow-md rounded-xl hover:scale-110"
               />
               <div
                 className={`active-indicator ${

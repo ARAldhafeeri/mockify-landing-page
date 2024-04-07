@@ -10,6 +10,9 @@ module.exports = {
         '500': '500px',
         '400': '400px'
       },
+      colors: {
+        'green1': '#00df9a'
+      }
     },
   },
   plugins: [],
