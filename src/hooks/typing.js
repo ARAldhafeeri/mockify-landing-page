@@ -30,7 +30,7 @@ const isSentenceDone = (currentSentenceIndex, sentences, currentCharacterIndex )
   return currentCharacterIndex === sentences[currentSentenceIndex].length;
 }
 
-export const TypeWriterArray = ({ sentences, delay, toggleHandler}) => {
+export const TypeWriterArray = ({ sentences, delay}) => {
   const [currentText, setCurrentText] = useState('');
   const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
   const [currentCharacterIndex, setCurrentCharacterIndex] = useState(0);
@@ -72,7 +72,6 @@ export const TypeWriterArray = ({ sentences, delay, toggleHandler}) => {
             deleteSentence();
         } else {
           typeNextSentence();
-          toggleHandler((value) => !value);
         }
       }, delay);
 

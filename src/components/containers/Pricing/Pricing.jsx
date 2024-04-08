@@ -73,8 +73,12 @@ export default function Pricing() {
   }, [cardCount]);
 
   return (
-    <div className="bg-[#0D1117] overflow-hidden pb-60 mx-auto flex flex-col justify-center items-center ">
-      <div className="max-w-[800px] w-full h-full mt-10 justify-center text-center items-center mx-auto flex flex-col space-y-4">
+    <div className="overflow-hidden pb-60 mx-auto flex flex-col justify-center items-center border-t-2  border-t-green1 ">
+      <div className="max-w-[800px]  w-full h-full mx-auto text-center flex flex-col justify-center items-center space-y-4">
+          <p className="text-[#00df9a] md:text-4xl text-2xl font-bold p-2">ACCELERATE</p>
+          <p className="md:text-3xl text-1xl w-70 text-white">
+            ACCELERATE DEVELOPMENT SPEED BY 10X
+          </p>
       </div>
       <>
         <div className="slider-container">

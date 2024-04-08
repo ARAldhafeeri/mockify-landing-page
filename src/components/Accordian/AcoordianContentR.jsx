@@ -3,18 +3,16 @@ import Header from '../common/Text/Header'
 import SubHeader from '../common/Text/SubHeader'
 import Paragraph from '../common/Text/Paragraph'
 
-export default function AcoordianContentR({image, heading, subHeading, paragraph}) {
+export default function AcoordianContentR({content, heading, subHeading, paragraph}) {
     return (
-        <div className=" m-10 pt-20 pb-20">
-            <div className=" md:grid md:grid-cols-2 grid-rows-2 top-[-100px]">
-               <div className='relative columns-1'>
+            <div className=" mx-auto m-5 p-5 md:grid md:grid-cols-2 grid grid-cols-1">
+               <div className='justify-self-center mx-auto'>
                 <Header text={heading} />
-                <SubHeader text={subHeading} />
                 <Paragraph text={paragraph} />
                </div>
-               <img src={image} alt="/" className="columns-2 md:w-[600px] md:h-[600px] shadow-2xl z-40" />
-
+                <div className='justify-self-center'>
+                    {content}
+                </div>
             </div>
-        </div>
     )
 }

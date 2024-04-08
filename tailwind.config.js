@@ -11,7 +11,8 @@ module.exports = {
         '400': '400px'
       },
       colors: {
-        'green1': '#00df9a'
+        'green1': '#00df9a',
+        'red1': "#ff4d4d"
       }
     },
   },

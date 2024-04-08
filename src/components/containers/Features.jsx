@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import AccordianItem from '../Accordian/AccordianItem';
 import AccordianContentR from '../Accordian/AcoordianContentR';
-import AccordianContentL from '../Accordian/AcoordianContentL';
 import projectImage from '../../assets/project.png';
 import entityImage from '../../assets/resource.png';
 import dataImage from '../../assets/data.png';
 import policyImage from '../../assets/policy.png';
 import endpointImage from '../../assets/endpoint.png';
 import edgeImage from '../../assets/edge.png';
-import all from '../../assets/all.png';
-import geo from '../../assets/bg/geo1.png';
+
 export default function Features() {
-  const [activeAccordion, setActiveAccordion] = useState(1);
+  const [activeAccordion, setActiveAccordion] = useState(0);
 
   const screenWidth = window.innerWidth;
 
@@ -27,12 +25,16 @@ export default function Features() {
   return (
     <div 
       id="features"  
-      className=" w-full bg-[#0D1117]  justify-center relative pb-[500px]  overflow-hidden"
+      className=" w-full bg-[#0D1117]  mt-5 mb-5  pt-5 pb-5 justify-center relative overflow-hidden"
       >
-        <div className='md:ml-[100px] md:mr-[100px]'>
-            {(!activeAccordion && screenWidth > 1000) && (
-              <img src={all} alt="/" className="sm:w-[400px] sm:h-[400px] mx-auto m-10 pt-20 pb-20 absolute  md:block hidden right-10 md:w-[800px] md:h-[800px] transition ease-in duration-100" />
-            )}
+        <div className="max-w-[800px]  mt-2 mb-2  w-full h-full mx-auto text-center flex flex-col justify-center items-center space-y-4">
+            <p className="text-[#00df9a] md:text-4xl text-2xl font-bold">MADE FOR API-FRIST APPROACH</p>
+            <p className="md:text-3xl text-1xl w-70 text-white">
+              SHIP YOUR APIs FASTER WITH MOCKIFY.IO
+            </p>
+        </div>
+        <div className=' mt-5 mb-5  pt-5 pb-5 md:ml-[50px] md:mr-[50px]'>
+
           <AccordianItem 
             toggleAccordion={toggleAccordion} 
             isAccordionActive={isAccordionActive}
@@ -41,10 +43,10 @@ export default function Features() {
             index={1}
             >
             <AccordianContentR 
-              image={projectImage}
-              heading="Effortlessly streamline your development process"
+              content={<img src={projectImage} alt="project" className="w-[300px] h-[300px]" /> }
+              heading="Securly Manage Mock APIs"
               subHeading="Manage mock APIs"
-              paragraph="Create and Manage Mock API Projects effortlessly streamline your development process by utilizing our platform to create and manage mock API projects. Benefit from a high-end UI/UX that ensures an intuitive experience throughout the project lifecycle."
+              paragraph="Securly Create and Manage Mock API Projects with ease. Lock down your mock APIs for existing project with Access token, create RBAC policies for defined  resources."
               />
           </AccordianItem>
           <AccordianItem 
@@ -54,7 +56,7 @@ export default function Features() {
             index={2}
             >
             <AccordianContentR 
-              image={entityImage}
+              content={entityImage}
               heading="Resource Creation with Custom Schema and feature flagging"
               subHeading="Data with precision"
               paragraph="Define the entities within your project with precision by creating resources and custom schemas. Tailor the structure to seamlessly fit the specific needs of your project, providing a flexible foundation for your API"
@@ -67,7 +69,7 @@ export default function Features() {
             index={3}
             >
             <AccordianContentR
-              image={dataImage}
+              content={dataImage}
               heading="Mock Data Management"
               subHeading="Simplify the process"
               paragraph="BY effortlessly creating and managing mock data for the defined resource schemas. Test your API with realistic data scenarios before deploying to production, ensuring a robust and reliable final product."
@@ -80,7 +82,7 @@ export default function Features() {
             index={4}
             >
             <AccordianContentR
-              image={policyImage}
+              content={policyImage}
               heading="Role-Based Access Control (RBAC)"
               subHeading="Mock dynamic policies"
               paragraph="Establish and simulate real-world scenarios with mock role-based access control. Manage policies and permissions to guarantee that your API behaves as expected across various user roles, enhancing security and control."
@@ -93,7 +95,7 @@ export default function Features() {
             index={5}
             >
             <AccordianContentR
-              image={endpointImage}
+              content={endpointImage}
               heading="Auto-Generated Endpoints"
               subHeading="Boost efficiency"
               paragraph="Boost efficiency and reduce development effort with our platform's auto-generated endpoints. Automate the endpoint creation process, allowing you to focus your energy on what matters most—building a powerful and resilient API."
@@ -106,7 +108,63 @@ export default function Features() {
             index={6}
             >
             <AccordianContentR
-              image={edgeImage}
+              content={edgeImage}
+              className="z-40"
+              heading="Handle all use cases with our powerful edge functions"
+              subHeading="Go beyond the basics"
+              paragraph="Customize the behavior of your API with ease by creating and managing edge functions. These functions seamlessly execute upon hitting specific endpoints, providing a tailored and powerful solution that aligns perfectly with your project's unique needs. Elevate your API development experience with the flexibility of edge functions."
+              />
+          </AccordianItem>
+          <AccordianItem 
+            toggleAccordion={toggleAccordion} 
+            isAccordionActive={isAccordionActive}
+            title="Events"
+            index={7}
+            >
+            <AccordianContentR
+              content={edgeImage}
+              className="z-40"
+              heading="Handle all use cases with our powerful edge functions"
+              subHeading="Go beyond the basics"
+              paragraph="Customize the behavior of your API with ease by creating and managing edge functions. These functions seamlessly execute upon hitting specific endpoints, providing a tailored and powerful solution that aligns perfectly with your project's unique needs. Elevate your API development experience with the flexibility of edge functions."
+              />
+          </AccordianItem>
+          <AccordianItem 
+            toggleAccordion={toggleAccordion} 
+            isAccordionActive={isAccordionActive}
+            title="Websocket"
+            index={8}
+            >
+            <AccordianContentR
+              content={edgeImage}
+              className="z-40"
+              heading="Handle all use cases with our powerful edge functions"
+              subHeading="Go beyond the basics"
+              paragraph="Customize the behavior of your API with ease by creating and managing edge functions. These functions seamlessly execute upon hitting specific endpoints, providing a tailored and powerful solution that aligns perfectly with your project's unique needs. Elevate your API development experience with the flexibility of edge functions."
+              />
+          </AccordianItem>
+          <AccordianItem 
+            toggleAccordion={toggleAccordion} 
+            isAccordionActive={isAccordionActive}
+            title="Cache"
+            index={9}
+            >
+            <AccordianContentR
+              content={edgeImage}
+              className="z-40"
+              heading="Handle all use cases with our powerful edge functions"
+              subHeading="Go beyond the basics"
+              paragraph="Customize the behavior of your API with ease by creating and managing edge functions. These functions seamlessly execute upon hitting specific endpoints, providing a tailored and powerful solution that aligns perfectly with your project's unique needs. Elevate your API development experience with the flexibility of edge functions."
+              />
+          </AccordianItem>
+          <AccordianItem 
+            toggleAccordion={toggleAccordion} 
+            isAccordionActive={isAccordionActive}
+            title="Swagger"
+            index={10}
+            >
+            <AccordianContentR
+              content={edgeImage}
               className="z-40"
               heading="Handle all use cases with our powerful edge functions"
               subHeading="Go beyond the basics"

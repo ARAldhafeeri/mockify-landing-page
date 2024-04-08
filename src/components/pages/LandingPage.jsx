@@ -1,17 +1,19 @@
 import React from 'react'
 import Navbar from '../common/Navbar'
-import Hero from '../common/Hero'
+import Hero from '../containers/Hero'
 import Features from '../containers/Features'
 import Pricing from '../containers/Pricing/Pricing'
+import WithAndWithout from '../containers/WithAndWithout'
 
 export default function LandingPage() {
   return (
-    <>
+    <div className='bg-[#0D1117]'>
     <Navbar />
     <Hero />
+    <WithAndWithout />
     <Features />
     <Pricing />
     <footer className="bg-[#000300] items- text-center text-xl text-white p-5 font-bold">2023 © mockify.io</footer>
-  </>
+  </ div>
   )
 }
