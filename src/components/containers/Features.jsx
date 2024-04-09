@@ -7,7 +7,7 @@ import dataImage from '../../assets/data.png';
 import policyImage from '../../assets/policy.png';
 import endpointImage from '../../assets/endpoint.png';
 import edgeImage from '../../assets/edge.png';
-
+import Project from '../../components/Accordian/content/Project'
 export default function Features() {
   const [activeAccordion, setActiveAccordion] = useState(0);
 
@@ -43,10 +43,10 @@ export default function Features() {
             index={1}
             >
             <AccordianContentR 
-              content={<img src={projectImage} alt="project" className="w-[300px] h-[300px]" /> }
+              content={<Project /> }
               heading="Securly Manage Mock APIs"
               subHeading="Manage mock APIs"
-              paragraph="Securly Create and Manage Mock API Projects with ease. Lock down your mock APIs for existing project with Access token, create RBAC policies for defined  resources."
+              paragraph="Securly Create and Manage Mock API endpoints for a project with ease. Mockify.io creates and secure every project with a unique API key, ensuring that your data is safe and secure."
               />
           </AccordianItem>
           <AccordianItem 
