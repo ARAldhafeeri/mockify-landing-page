@@ -84,7 +84,7 @@ export const TypeWriterArray = ({ sentences, delay}) => {
   }, [currentCharacterIndex, currentSentenceIndex, delay, sentences]);
   const color = sentences[currentSentenceIndex].pos ? 'text-[#00df9a]' : 'text-[#ff4d4d]';
 
-  return <span className={color + " text-xl-2 font-bold"}>{currentText} {!isSentencesWrittingDone(currentSentenceIndex, sentences, currentCharacterIndex) && <span className={ color + " animate-ping font-bold"}>|</span> }</span>;
+  return <span className={color + " text-[#00df9a] md:text-4xl text-2xl font-bold p-2"}>{currentText} {!isSentencesWrittingDone(currentSentenceIndex, sentences, currentCharacterIndex) && <span className={ color + " animate-ping font-bold"}>|</span> }</span>;
 };
 
 

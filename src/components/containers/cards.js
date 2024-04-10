@@ -1,11 +1,11 @@
-import api from '../../../assets/api.png';
-import features from '../../../assets/features.png';
-import adapt from '../../../assets/adapt.png';
-import collab from '../../../assets/collab.png';
+import api from '../../assets/api.png';
+import features from '../../assets/features.png';
+import adapt from '../../assets/adapt.png';
+import collab from '../../assets/collab.png';
 
 export const cards = [
     {
-        header: "API-First Design",
+        header: "API-First",
         paragraph: "Mockify.io streamlines API-first design by enabling developers to effortlessly create, manage, and share mock APIs.", 
         image: api,
         link: "https://swagger.io/resources/articles/adopting-an-api-first-approach/", 
