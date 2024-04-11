@@ -8,6 +8,7 @@ export default function AcoordianContentR({content, heading, subHeading, paragra
             <div className=" mx-auto m-5 p-5 md:grid md:grid-cols-2 grid grid-cols-1">
                <div className='justify-self-center mx-auto'>
                 <Header text={heading} />
+                <SubHeader text={subHeading} />
                 <Paragraph text={paragraph} />
                </div>
                 <div className='justify-self-center'>

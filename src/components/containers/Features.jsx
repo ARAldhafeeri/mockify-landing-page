@@ -8,8 +8,11 @@ import policyImage from '../../assets/policy.png';
 import endpointImage from '../../assets/endpoint.png';
 import edgeImage from '../../assets/edge.png';
 import Project from '../../components/Accordian/content/Project'
+import Resource from '../Accordian/content/Resource/Resource';
+import { defaultContent } from '../Accordian/content/Resource/EntityRelationalDiagram';
+import Data from '../Accordian/content/Data/Data';
 export default function Features() {
-  const [activeAccordion, setActiveAccordion] = useState(0);
+  const [activeAccordion, setActiveAccordion] = useState(1);
 
   const screenWidth = window.innerWidth;
 
@@ -34,7 +37,7 @@ export default function Features() {
             </p>
         </div>
         <div className=' mt-5 mb-5  pt-5 pb-5 md:ml-[50px] md:mr-[50px]'>
-
+{/* project */}
           <AccordianItem 
             toggleAccordion={toggleAccordion} 
             isAccordionActive={isAccordionActive}
@@ -46,9 +49,10 @@ export default function Features() {
               content={<Project /> }
               heading="Securly Manage Mock APIs"
               subHeading="Manage mock APIs"
-              paragraph="Securly Create and Manage Mock API endpoints for a project with ease. Mockify.io creates and secure every project with a unique API key, ensuring that your data is safe and secure."
+              paragraph="Securly Create and Manage Mock API endpoints for a project with ease. Mockify.io auto generate access token for every project created access to resources under the created project requires project API key."
               />
           </AccordianItem>
+{/* resources */}
           <AccordianItem 
             toggleAccordion={toggleAccordion} 
             isAccordionActive={isAccordionActive}
@@ -56,12 +60,13 @@ export default function Features() {
             index={2}
             >
             <AccordianContentR 
-              content={entityImage}
-              heading="Resource Creation with Custom Schema and feature flagging"
+              content={<Resource />}
+              heading="Resource Creation with Custom Schema"
               subHeading="Data with precision"
               paragraph="Define the entities within your project with precision by creating resources and custom schemas. Tailor the structure to seamlessly fit the specific needs of your project, providing a flexible foundation for your API"
               />
           </AccordianItem>
+{/* data */}
           <AccordianItem 
             toggleAccordion={toggleAccordion} 
             isAccordionActive={isAccordionActive}
@@ -69,10 +74,10 @@ export default function Features() {
             index={3}
             >
             <AccordianContentR
-              content={dataImage}
+              content={<Data />}
               heading="Mock Data Management"
-              subHeading="Simplify the process"
-              paragraph="BY effortlessly creating and managing mock data for the defined resource schemas. Test your API with realistic data scenarios before deploying to production, ensuring a robust and reliable final product."
+              subHeading="Manage Mock Data"
+              paragraph="Effortlessly creating and managing mock data for the defined resource schemas. Test your API with realistic data scenarios before deploying to production, ensuring a robust and reliable final product."
               />
           </AccordianItem>
           <AccordianItem 

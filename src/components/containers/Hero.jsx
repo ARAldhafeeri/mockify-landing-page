@@ -46,7 +46,7 @@ const autoSlideInterval = 5000;
         { pos: false, text: "Simplified Complexity!" },
         { pos: true, text: " Instants Endpoints..." },
         { pos: false, text: "Bypass SDLCs Bottlenecks!" },
-        { pos: true, text: " Ship 10x Faster..." },
+        { pos: true, text: " SHIP 10x FASTER FOR FREE FOR EVER..." },
       ]
       const navigate = useNavigate();
       const [[cardCount, direction], setCardCount] = useState([0, 0]);

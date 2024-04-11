@@ -2,36 +2,59 @@ import React from 'react'
 import projectIcon from '../../../assets/project/project-icon.png'
 import apiKeyIcon from '../../../assets/project/apikey-icon.png'
 import LabelWithTopBorder from '../../common/LabelWithTopBorder';
+import Input from '../../common/Input';
+import AddButton from '../../common/AddButton';
+import RemoveButton from '../../common/RemoveButton';
 
 function generateApiKey() {
   return Math.random().toString(36).substring(2, 10);
 }
 
-function iconAndName(icon, name){
+function iconAndName(id, icon, name, className) {
   return (
-    <div className='flex m-4 b-4 justify-center grid grid-rows-2'>
+    <div id={`${id}`} className={`m-4 b-4 justify-center grid grid-rows-2 ${className}`}>
       <img src={icon} alt={name} className='w-[50px] h-[50px] justify-self-center' />
       <h1 className='text-sm text-white justify-self-center'>{name}</h1>
     </div>
-  )
+  );
 }
 
 export default function Project() {
+  const id = generateApiKey();
   const [project, setProject] = React.useState('');
-  const [apikeys, setApiKeys] = React.useState([]);
-  const [projects, setProjects] = React.useState([]);
- 
+  const [apikeys, setApiKeys] = React.useState([iconAndName(id, apiKeyIcon, generateApiKey(), "fade-in")]);
+  const [projects, setProjects] = React.useState([iconAndName(id, projectIcon, 'Project 1', "fade-in")]);
+  const [ids, setIds] = React.useState([[id]]);
+  
   function addNewProject(e) {
     e.preventDefault();
     const apiKey = generateApiKey();
-    setApiKeys([...apikeys, iconAndName(apiKeyIcon, apiKey)]);
-    setProjects([...projects, iconAndName(projectIcon, project)]);
+    const newId = generateApiKey();
+    const newProject = iconAndName(newId, projectIcon, project, 'slide-in');
+    const newApiKey = iconAndName(newId, apiKeyIcon, apiKey, 'slide-in');
+
+    setProjects(prevProjects => [...prevProjects, newProject]);
+    setApiKeys(prevApiKeys => [...prevApiKeys, newApiKey]);
+    setIds(prevIds => [...prevIds, newId]);
+
+    setTimeout(() => {
+      newProject?.classList?.remove('slide-in');
+      newApiKey?.classList?.remove('slide-in');
+    }, 1000); // Adjust timing as needed
   }
 
   function removeProject(idx) {
-    setProjects(projects.filter((item, index) => index !== idx));
-    setApiKeys(apikeys.filter((item, index) => index !== idx));
+    const id = ids[idx];
+    const item = document.getElementById(`${id}`);
+    console.log(item)
+      item.classList.add('slide-out');
+      setTimeout(() => {
+        setProjects(projects => projects.filter((_, index) => index !== idx));
+        setApiKeys(apikeys => apikeys.filter((_, index) => index !== idx));
+        setIds(ids => ids.filter((_, index) => index !== idx));
+      }, 200);
   }
+
 
   return (
     <div className="grid grid-rows-2">
@@ -42,9 +65,7 @@ export default function Project() {
                 {projects.map((item, index) => (
                   <div className='relative'> 
                   {item}
-                  <button  className=" absolute top-0 right-0 justify-center ml-2 bg-green1 rounded-lg items-center  w-[20px] h-[20px] hover:bg-[#000300] " type="submit" onClick={() => removeProject(index)}>
-                    <label className="md:text-1xl text-1xl w-10 justify-self-center  text-white">-</label>
-                  </button>
+                  <RemoveButton handler={removeProject} index={index} />
                   
                   </ div>
                 ))}
@@ -60,10 +81,8 @@ export default function Project() {
           </div>
       </div>
         <form className='flex justify-start ml-10'> 
-          <input  onChange={(e) => setProject(e.target.value)} className='bg-green1 rounded-lg  border-none text-white h-[40px] hover:bg-[#000300]  focus:border-t-black '/>
-          <button  className="flex justify-center ml-2 bg-green1 rounded-lg items-center  h-[40px] hover:bg-[#000300] " type="submit" onClick={addNewProject}>
-            <label className="md:text-1xl text-1xl w-10 justify-self-center  text-white">+</label>
-          </button>
+          <Input placeholder="Project Name" handler={setProject} />
+          <AddButton onclick={addNewProject} />
         </form>
     </div>
   )

@@ -2,13 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   background-color: white;
 }
 
 
 html * {
-  font-family: 'mono', monospace;
+  font-family: 'Poppins', sans-serif;
+  font-display: swap;
+  line-height: 1.5;
 
 }
 
@@ -87,4 +90,62 @@ input {
 
 input:focus {
   outline: none;
+}
+
+input::placeholder {
+  color: white;
+}
+
+.diagram-container {
+  width: 400px;
+  height: 400px;
+  background: #0D1117;
+  border-radius: 10%; 
+  border-color: #00df9a;
+  border-width: 1px;
+  box-shadow: #00df9a 0px 0px 10px;
+}
+
+
+.fade-in {
+  animation: fadeIn ease 0.5s; /* Adjust animation duration as needed */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.5s ease forwards;
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-300px); /* Adjust as needed */
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
