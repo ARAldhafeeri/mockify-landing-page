@@ -5,6 +5,8 @@ import LabelWithTopBorder from '../../common/LabelWithTopBorder';
 import Input from '../../common/Input';
 import AddButton from '../../common/AddButton';
 import RemoveButton from '../../common/RemoveButton';
+import Paragraph from "../../common/Text/Paragraph";
+import Header from "../../common/Text/Header";
 
 function generateApiKey() {
   return Math.random().toString(36).substring(2, 10);

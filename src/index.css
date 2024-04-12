@@ -86,6 +86,36 @@ svg {
 
 input {
   outline: none;
+  transform:
+  rotateX(51deg)
+  rotateZ(43deg);
+transform-style: preserve-3d;
+border-radius: 32px;
+box-shadow: #00df9a 0px 0px 10px;
+}
+
+table {
+transform-style: preserve-3d;
+border-radius: 32px;
+box-shadow: #00df9a 0px 0px 10px;
+}
+
+button {
+  outline: none;
+  transform:
+  rotateX(51deg)
+  rotateZ(43deg);
+  box-shadow: #00df9a 0px 0px 10px;
+
+}
+
+select {
+  outline: none;
+  transform:
+  rotateX(51deg)
+  rotateZ(43deg);
+  box-shadow: #00df9a 0px 0px 10px;
+
 }
 
 input:focus {
@@ -149,3 +179,121 @@ input::placeholder {
     opacity: 1;
   }
 }
+
+/* card hero animation  */
+.thumbnail-container {
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+
+  transition: transform 0.2s ease-in-out;
+  opacity: 0.8; /* Decreased opacity */
+  animation: rotateThumbnail 10s linear infinite; /* Loop in rotation */
+}
+
+@keyframes rotateThumbnail {
+  5% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(30deg);
+  }
+  15% {
+    transform: rotate(-30deg);
+  }
+}
+
+.thumbnail-container:hover {
+  transform: scale(1.1);
+}
+
+.active-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #12a174;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.card {
+  transform:
+    perspective(750px)
+    translate3d(0px, 0px, -250px)
+    rotateX(27deg)
+    scale(0.9, 0.9);
+}
+
+.card:hover {
+  transform:
+  rotate3d(.5,-.866,0,0deg)
+  rotate(0deg);
+}
+
+/* scale and fade in */
+
+.scale-fade-in {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scaleFadeInAnimation 0.5s ease-out forwards;
+}
+
+@keyframes scaleFadeInAnimation {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/*  tag */
+.tag {
+  /* 3D effect */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* tooltip */
+
+.tooltip-container {
+  position: relative;
+  display: inline-block; /* Ensures tooltip container doesn't expand */
+}
+
+.tooltip-content {
+  visibility: hidden;
+  width: cover;
+  background-color: #000300;
+  color: #00df9a;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position it above the trigger */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  opacity: 0.75;
+  transition: opacity 0.1s;
+}
+
+.tooltip-container:hover .tooltip-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Styling for the arrow */
+.tooltip-content::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+

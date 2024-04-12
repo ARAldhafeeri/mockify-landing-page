@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import AccordianItem from '../Accordian/AccordianItem';
 import AccordianContentR from '../Accordian/AcoordianContentR';
-import projectImage from '../../assets/project.png';
-import entityImage from '../../assets/resource.png';
-import dataImage from '../../assets/data.png';
-import policyImage from '../../assets/policy.png';
 import endpointImage from '../../assets/endpoint.png';
 import edgeImage from '../../assets/edge.png';
 import Project from '../../components/Accordian/content/Project'
 import Resource from '../Accordian/content/Resource/Resource';
-import { defaultContent } from '../Accordian/content/Resource/EntityRelationalDiagram';
 import Data from '../Accordian/content/Data/Data';
+import Access from '../Accordian/content/Access/Access';
 export default function Features() {
   const [activeAccordion, setActiveAccordion] = useState(1);
 
@@ -48,7 +44,7 @@ export default function Features() {
             <AccordianContentR 
               content={<Project /> }
               heading="Securly Manage Mock APIs"
-              subHeading="Manage mock APIs"
+              subHeading="Don't compromise via a mock API"
               paragraph="Securly Create and Manage Mock API endpoints for a project with ease. Mockify.io auto generate access token for every project created access to resources under the created project requires project API key."
               />
           </AccordianItem>
@@ -87,7 +83,7 @@ export default function Features() {
             index={4}
             >
             <AccordianContentR
-              content={policyImage}
+              content={<Access />}
               heading="Role-Based Access Control (RBAC)"
               subHeading="Mock dynamic policies"
               paragraph="Establish and simulate real-world scenarios with mock role-based access control. Manage policies and permissions to guarantee that your API behaves as expected across various user roles, enhancing security and control."

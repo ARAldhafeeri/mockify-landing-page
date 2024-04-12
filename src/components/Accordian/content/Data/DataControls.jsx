@@ -12,7 +12,7 @@ export default function DataControls({content, setContent}) {
         setContent([...content, {firstName: firstname, lastName: lastname, age: age, avatar: 'https://www.w3schools.com/w3images/avatar2.png'}])
     }
     return (
-    <form className="flex flex-row">
+    <form className="flex flex-row mb-5">
       <Input type='text' name="firstName" placeholder='First Name'  handler={setFirstname}/>
       <Input type='text' name="lastName" placeholder='Last Name' handler={setLastname} />
       <Input type='number' name="age" placeholder='Age' handler={setAge} />

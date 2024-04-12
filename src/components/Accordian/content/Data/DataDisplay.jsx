@@ -7,7 +7,7 @@ export default function DataDisplay({ content, setContent }) {
 
   return (
     <div className="overflow-x-auto">
-      <table className="min-w-full shadow-lg shadow-[#12a174]">
+      <table className="min-w-full border-collapse border border-gray-300 shadow-lg rounded-lg overflow-hidden">
         <thead>
           <tr className="bg-green1">
             <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">First Name</th>
@@ -16,14 +16,16 @@ export default function DataDisplay({ content, setContent }) {
             <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Avatar</th>
           </tr>
         </thead>
-        <tbody className="bg-[#000300] divide-y divide-gray-200">
+        <tbody className="bg-gray-900 divide-y divide-gray-700">
           {content.map((person, index) => (
             <tr key={index} className="transition-all hover:bg-gray-800 hover:text-white">
               <td className="px-6 py-4 whitespace-nowrap text-white">{person.firstName}</td>
               <td className="px-6 py-4 whitespace-nowrap text-white">{person.lastName}</td>
               <td className="px-6 py-4 whitespace-nowrap text-white">{person.age}</td>
               <td className="px-6 py-4 whitespace-nowrap text-white relative flex items-center">
-                <img src={person.avatar} alt='avatar' className='w-12 h-12 rounded-full mr-2' />
+                <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-green-500">
+                  <img src={person.avatar} alt='avatar' className='absolute inset-0 w-full h-full object-cover' />
+                </div>
                 <RemoveButton handler={removeRow} index={index} />
               </td>
             </tr>

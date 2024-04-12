@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from '@popmotion/popcorn';
 import { cards } from './cards';
-
+import herobg from "../../assets/hero.png"
 const sliderVariants = {
   incoming: direction => ({
     x: direction > 0 ? '100%' : '-100%',
@@ -86,7 +86,10 @@ const autoSlideInterval = 5000;
         return () => clearInterval(intervalId);
       }, [cardCount]);
   return (
-  <div id="hero" className=" text-white md:grid md:grid-cols-2 m-5">
+  <div id="hero" className=" text-white md:grid md:grid-cols-2 m-5" style={{
+    backgroundImage: `url(${herobg})`,
+    backgroundRepeat: 'no-repeat',
+  }}>
     <div className="max-w-[800px]  w-full h-full mt-10 mx-auto md:text-left text-center flex flex-col space-y-4">
       <p className="text-[#00df9a] md:text-4xl text-2xl font-bold p-2"> Empower Your Team</p>
       <p className="md:text-3xl text-1xl w-70 text-center md:text-left ">
