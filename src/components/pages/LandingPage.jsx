@@ -13,7 +13,7 @@ export default function LandingPage() {
     <WithAndWithout />
     <Features />
     <Pricing />
-    <footer className="bg-[#000300] items- text-center text-xl text-white p-5 font-bold">2023 © mockify.io</footer>
+    <footer className="bg-green1 items- text-center text-xl text-white p-5 font-bold">2024 © mockify.io</footer>
   </ div>
   )
 }

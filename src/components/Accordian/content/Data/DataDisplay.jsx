@@ -6,7 +6,7 @@ export default function DataDisplay({ content, setContent }) {
   };
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto table">
       <table className="min-w-full border-collapse border border-gray-300 shadow-lg rounded-lg overflow-hidden">
         <thead>
           <tr className="bg-green1">

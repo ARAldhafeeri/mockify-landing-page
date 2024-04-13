@@ -99,7 +99,7 @@ const autoSlideInterval = 5000;
       <div className="max-w-[800px] space-y-4">
         <button
           onClick={() => navigate('/docs')}
-          className="text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 bg-black hover:bg-[#12a174]"
+          className="text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 bg-#0D1117 hover:bg-[#12a174]"
         >
           Get started
         </button>
@@ -120,7 +120,7 @@ const autoSlideInterval = 5000;
             <img
               src={card.image}
               alt={card.header}
-              className="md:w-[75px] md:h-[75px] w-[50px] h-[50px] shadow-[#12a174] bg-[#000300] shadow-md rounded-xl hover:scale-110"
+              className="md:w-[75px] md:h-[75px] w-[50px] h-[50px] shadow-[#12a174] bg-[#0D1117] shadow-md rounded-xl hover:scale-110"
             />
             <div
               className={`active-indicator ${

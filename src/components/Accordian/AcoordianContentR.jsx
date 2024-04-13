@@ -3,6 +3,7 @@ import Header from '../common/Text/Header';
 import SubHeader from '../common/Text/SubHeader';
 import Paragraph from '../common/Text/Paragraph';
 
+
 export default function AcoordianContentR({ content, heading, subHeading, paragraph }) {
     const [showContent, setShowContent] = useState(false);
 

@@ -25,11 +25,11 @@ export default function AccessDisplay({ content, setContent }) {
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-white">
               <div class="tooltip-container">
-                  <span class="tooltip-trigger"><Tag text={role.entities.length} /> </span>
+                  <span class="tooltip-trigger"><Tag text={role.actions.length} /> </span>
                   <div class="tooltip-content flex flex-row">
                     {
-                      role.actions.map((entity, index) => (
-                        <Tag key={index} text={entity} />
+                      role.actions.map((action, index) => (
+                        <Tag key={index} text={action} />
                       ))
                     
                     }
