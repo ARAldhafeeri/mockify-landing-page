@@ -103,18 +103,13 @@ transition: all .5s;
 
 button {
   outline: none;
-  transform:
-  rotateX(51deg)
-  rotateZ(43deg);
-  box-shadow: #00df9a 0px 0px 10px;
+  border-radius: 3%;
+  box-shadow: #00df9a 0px 0px 1px;
 
 }
 
 select {
   outline: none;
-  transform:
-  rotateX(51deg)
-  rotateZ(43deg);
   box-shadow: #00df9a 0px 0px 10px;
 
 }
@@ -218,7 +213,7 @@ input::placeholder {
   right: 5px;
 }
 
-.card {
+/* .card {
   transform:
     perspective(750px)
     translate3d(0px, 0px, -250px)
@@ -230,7 +225,7 @@ input::placeholder {
   transform:
   rotate3d(.5,-.866,0,0deg)
   rotate(0deg);
-}
+} */
 
 /* scale and fade in */
 
@@ -450,4 +445,49 @@ input::placeholder {
   border-radius: 32px;
   box-shadow: #00df9a 0px 0px 10px;
   transform-style: preserve-3d;
+}
+
+.pricingCardHeader {
+  color: white;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+
+/* pricing card flip */
+
+.card-wrapper {
+  position: relative;
+  transition: transform 0.5s;
+  perspective: 1000px; /* Specify the perspective */
+}
+
+.card-wrapper.hover {
+  transform: rotateY(180deg); /* Apply rotation on hover */
+}
+
+.card-wrapper:hover .card-back {
+  transform: rotateY(0deg); /* Show back side of the card on hover */
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back side by default */
+  transform: rotateY(180deg); /* Rotate initially to hide */
+}
+
+/* Apply rotation to the text inside the card */
+.card-content {
+  transform: rotateY(180deg);
+}
+
+
+footer {
+  background-color: #efefef;
+  flex: 0 0 50px;/*or just height:50px;*/
+  margin-top: auto;
 }
