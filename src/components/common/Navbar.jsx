@@ -23,24 +23,20 @@ export default function Navbar() {
     }, [showMenu]);
 
     return (
-        <div className="bg-[#0D1117] relative text-white justify-between items-center h-24 max-w[1240px] mx-auto px-4">
-            <div className="flex flex-row items-center space-x-44">
-            <ul className="hidden md:flex right-0">
-              <li className="p-4 text-lg hover:underline text-green1"><a href="#features">Features</a></li>
-              <li className="p-4 text-lg hover:underline text-green1"><a href="#features">About</a></li>
-              <li className="p-4 text-lg hover:underline text-green1"><a href="#features">Pricing</a></li>
-            </ul>
-            <div className="flex flex-row justify-end">
-                <img src={logo} alt="/" className="w-10 h-10" />
-                <h1 className="w-full text-lg font-bold mt-2 text-[#00df9a]">Mockify.io</h1>
-            </div>
-            <div className='flex flex-row mt-10'>
-              <button className="hidden md:flex hover:bg-[#0D1117] bg-[#00df9a] text-white font-bold py-2 px-4 rounded-full">Signup</button>
-              <button className="hidden md:flex hover:bg-[#0D1117] bg-[#00df9a] text-white font-bold py-2 px-4 rounded-full ">Documentation</button>
+        <div className="bg-[#0D1117] relative text-white h-24 max-w[1240px] px-4">
+           <div className="flex flex-row  justify-between">
+            <div className="flex flex-row items-center space-x-44 mt-2">
+                    <ul className="hidden md:flex right-0">
+                        <li className="p-4 text-lg hover:underline text-green1"><a href="#features">Features</a></li>
+                        <li className="p-4 text-lg hover:underline text-green1"><a href="#features">About</a></li>
+                        <li className="p-4 text-lg hover:underline text-green1"><a href="#features">Pricing</a></li>
+                    </ul>
+                </div>
 
+                <div className='flex flex-row space-x-2 mt-4'>
+                
+                </div>
             </div>
-            </div>
-
             <div onClick={toggleMenu} className='block md:hidden'>
                 {!showMenu && (<AiOutlineMenu className="text-3xl" />)}
             </div>

@@ -8,7 +8,7 @@ import LandingPage from "./components/pages/LandingPage";
 
 const MainRouter = createBrowserRouter([
   {
-    path: "/",
+    path: "mockify-landing-page/",
     element: <LandingPage />,
   },
 ]);

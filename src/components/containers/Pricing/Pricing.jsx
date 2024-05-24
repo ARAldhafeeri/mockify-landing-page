@@ -15,16 +15,16 @@ export default function Pricing() {
       <div className="max-w-[800px]  w-full h-full mx-auto text-center flex flex-col justify-center items-center space-y-4">
         <p className="text-[#00df9a] md:text-4xl text-2xl font-bold p-2">ACCELERATE</p>
         <p className="md:text-3xl text-1xl w-70 text-white">
-          ACCELERATE DEVELOPMENT SPEED BY 10X
+          ACCELERATE DEVELOPMENT SPEED 
         </p>
       </div>
-      <div className='grid gird:grid-rows-3 md:grid-cols-3 gap-4 mt-5 mb-5  pt-5 pb-5 md:ml-[50px] md:mr-[50px]'>
+      <div className='grid gird:grid-rows-3 md:grid-cols-3 gap-4 mt-5 mb-5  pt-5 pb-5 md:ml-[50px] md:mr-[50px] ease-in-out duration-300'>
         {cards.map((card, index) => (
           <div
             key={card.category}
             className={`card-wrapper ${cardHover === index ? 'hover' : ''}`}
             onMouseEnter={() => handleCardHover(index)}
-            onMouseLeave={() => setCardHover(null)}>
+            >
             {cardHover === index ? (
               <CardPricing
                 category={card.category}

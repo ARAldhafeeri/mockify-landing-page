@@ -98,7 +98,7 @@ const autoSlideInterval = 5000;
       <TypeWriterArray sentences={sentences} delay={40} />
       <div className="max-w-[800px] space-y-4">
         <button
-          onClick={() => navigate('/docs')}
+          onClick={() => window.location.replace("https://araldhafeeri.github.io/mockify-docs-portal/")}
           className="text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 bg-#0D1117 hover:bg-[#12a174]"
         >
           Get started
