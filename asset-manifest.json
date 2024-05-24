@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mockify-landing-page/static/css/main.4a68ccca.css",
+    "main.js": "/mockify-landing-page/static/js/main.04bdb13f.js",
+    "static/media/logo.png": "/mockify-landing-page/static/media/logo.45e5afec383e744bd789.png",
+    "static/media/without.png": "/mockify-landing-page/static/media/without.c5fb6dcde595f2359999.png",
+    "static/media/with.png": "/mockify-landing-page/static/media/with.b02fa6f3ef76fc536fb5.png",
+    "static/media/featuresPattern.png": "/mockify-landing-page/static/media/featuresPattern.2f4275f305b412cbc1e6.png",
+    "static/media/project-icon.png": "/mockify-landing-page/static/media/project-icon.a619a0d317b1f3abea0a.png",
+    "static/media/apikey-icon.png": "/mockify-landing-page/static/media/apikey-icon.ec9864267b2cf62b2e28.png",
+    "static/media/adapt.png": "/mockify-landing-page/static/media/adapt.99c3ce9714e838109a36.png",
+    "static/media/collab.png": "/mockify-landing-page/static/media/collab.ad9544207ffc062d114c.png",
+    "static/media/api.png": "/mockify-landing-page/static/media/api.7b70501b466a8cd33698.png",
+    "index.html": "/mockify-landing-page/index.html",
+    "main.4a68ccca.css.map": "/mockify-landing-page/static/css/main.4a68ccca.css.map",
+    "main.04bdb13f.js.map": "/mockify-landing-page/static/js/main.04bdb13f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a68ccca.css",
+    "static/js/main.04bdb13f.js"
+  ]
+}
