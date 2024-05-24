@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mockify-landing-page/static/css/main.82ff2af9.css",
-    "main.js": "/mockify-landing-page/static/js/main.d908b908.js",
+    "main.css": "/mockify-landing-page/static/css/main.6921fedb.css",
+    "main.js": "/mockify-landing-page/static/js/main.4464db1a.js",
     "static/media/logo.png": "/mockify-landing-page/static/media/logo.45e5afec383e744bd789.png",
     "static/media/without.png": "/mockify-landing-page/static/media/without.c5fb6dcde595f2359999.png",
     "static/media/with.png": "/mockify-landing-page/static/media/with.b02fa6f3ef76fc536fb5.png",
@@ -12,11 +12,11 @@
     "static/media/collab.png": "/mockify-landing-page/static/media/collab.ad9544207ffc062d114c.png",
     "static/media/api.png": "/mockify-landing-page/static/media/api.7b70501b466a8cd33698.png",
     "index.html": "/mockify-landing-page/index.html",
-    "main.82ff2af9.css.map": "/mockify-landing-page/static/css/main.82ff2af9.css.map",
-    "main.d908b908.js.map": "/mockify-landing-page/static/js/main.d908b908.js.map"
+    "main.6921fedb.css.map": "/mockify-landing-page/static/css/main.6921fedb.css.map",
+    "main.4464db1a.js.map": "/mockify-landing-page/static/js/main.4464db1a.js.map"
   },
   "entrypoints": [
-    "static/css/main.82ff2af9.css",
-    "static/js/main.d908b908.js"
+    "static/css/main.6921fedb.css",
+    "static/js/main.4464db1a.js"
   ]
 }
