@@ -28,8 +28,7 @@ export default function Navbar() {
             <div className="flex flex-row items-center space-x-44 mt-2">
                     <ul className="hidden md:flex right-0">
                         <li className="p-4 text-lg hover:underline text-green1"><a href="#features">Features</a></li>
-                        <li className="p-4 text-lg hover:underline text-green1"><a href="#features">About</a></li>
-                        <li className="p-4 text-lg hover:underline text-green1"><a href="#features">Pricing</a></li>
+                    
                     </ul>
                 </div>
 
